@@ -20,13 +20,15 @@ export default function App() {
           Something
         </NavLink>
       </div>
-      <Switch>
-        <Route path="/" exact component={Default} />
-        <Route path="/sample" component={Sample} />
-        <Route path="/something" component={Something} />
-        <Route path='/default' render={() => <Redirect to= "/" />} />
-        <Route component={NoMatch} />
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/" exact component={Default} />
+          <Route path="/sample" component={Sample} />
+          <Route path="/something" component={Something} />
+          <Route path='/default' render={() => <Redirect to="/" />} />
+          <Route component={NoMatch} />
+        </Switch>
+      </main>
     </div>
   );
 }
